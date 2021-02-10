@@ -1,0 +1,25 @@
+/* CSS HERE */
+
+
+/* Try: updating the background to a gradient */
+
+.animate {
+    animation-name: animate;
+    animation-duration: infinite;
+    display: none;
+}
+
+/* Try: changing the font styling of h1 or h2 elements */
+
+
+/* Try: targeting one element on a specific site and changing something about it's appearance*/
+
+@keyframes animate {
+    from {
+        transform: translateX(0px);
+    }
+
+    to {
+        transform: translateX(10px);
+    }
+}
