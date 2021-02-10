@@ -1,6 +1,6 @@
 {
     "manifest_version": 2,
-    "name": "Assignment 01 Plugin",
+    "name": "Freeze Plugin",
     "description": "some trials in coding for nmed 3720",
     "version": "1.0",
     "permissions": ["activeTab"],
@@ -14,12 +14,13 @@
      ],
     "action": {
         "default_icon": {
-            "64": "/images/icon1.png"
+            "32": "/images/snowflake.png"
         },
         "default_popup": "popup.html"
     },
     "web_accessible_resources": [
         "images/*.jpg",
-        "images/*.png"
+        "images/*.png",
+        "images/*.gif"
      ]
 }
