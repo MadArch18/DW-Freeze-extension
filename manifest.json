@@ -1,7 +1,7 @@
 {
     "manifest_version": 2,
     "name": "Freeze Plugin",
-    "description": "some trials in coding for nmed 3720",
+    "description": "now your computer can endure the trials of winter without actually freezing!",
     "version": "1.0",
     "permissions": ["activeTab"],
     "content_scripts": [

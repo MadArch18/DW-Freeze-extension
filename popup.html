@@ -1,12 +1,26 @@
 <html>
 
 <head>
-    <link rel='stylesheet' href='css/popup.css'>
+    <link rel='stylesheet' href='css/style.css'>
 </head>
 
 <body>
-    <h1>Welcome to Winter!</h1>
-    <button id='button' value="#C1F0F6">Initiate Polar Vortex</button>
+    <div class="popup">
+        <div class="thermometer">
+            <div class="thermo1"></div>
+            <div class="thermo2"></div>
+        </div>
+        <div class="titles">
+            <h3>How Cold is this Polar Vortex?</h3>
+            <div class="container">
+                <input type="checkbox" id="checkall">Select All<br>
+                <input type="checkbox" class="checkboxes" id="bg" value="lightblue">-5<br>
+                <input type="checkbox" class="checkboxes">-10<br>
+                <input type="checkbox" class="checkboxes">-20<br>
+                <input type="checkbox" class="checkboxes" id="snow">-40<br>
+            </div>
+        </div>
+    </div>
     <script src='js/jquery.js'></script>
     <script src='js/popup.js'></script>
 </body>

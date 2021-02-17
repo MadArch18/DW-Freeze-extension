@@ -3,3 +3,47 @@ body {
     cursor: url(../images/snowflake.png), auto;
 }
 */
+
+.popup {
+    min-width: 100px;
+    position: relative;
+    min-height: 100px;
+}
+
+.titles {
+    position: absolute;
+    left: 20%;
+}
+
+h3 {
+    text-align: center;
+    line-height: 1em;
+    min-width: 50px;
+}
+
+
+.container {
+    display: block;
+    position: relative;
+}
+
+.thermometer {
+    position: absolute;
+    bottom: -80px;
+    padding: 10px 0;
+}
+
+.thermo2 {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: crimson;
+    margin: 0 auto;
+}
+
+.thermo1 {
+    width: 5px;
+    height: 150px;
+    background-color: crimson;
+    margin: 0 auto;
+}
