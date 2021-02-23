@@ -2,19 +2,7 @@ console.log("extension is running!");
 
 var storm;
 
-
-//function animate() {
-//    $("h1 h2 h3 h4 a").hover(function () {
-//        $(this).animate({
-//            color: "aqua"
-//        }, 500);
-//        console.log("animation");
-//    })
-//
-//}
-
-
-var url = "http://pngimg.com/image/96122";
+//image sourced from http://pngimg.com/image/96122
 var source = chrome.runtime.getURL("/images/icicle-1.png");
 img = new Image();
 img.src = source;
@@ -29,6 +17,7 @@ chrome.runtime.onMessage.addListener(
         }
         if (request.message == "shivering") {
             console.log("shiver me timbers");
+            alert("Hover over some links, they're getting cold!");
             $("a").hover(function () {
                 $(this).css("color", "aqua");
             })

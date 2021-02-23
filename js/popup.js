@@ -1,7 +1,7 @@
 console.log("I'm the popup script!")
 
 $("#bg").on("click", bluebackground);
-$("#shiver").on("click", animation);
+$("#shiver").on("click", shivers);
 $("#ice").on("click", icicles);
 $("#snow").on("click", snowing);
 
@@ -19,13 +19,11 @@ function bluebackground() {
                 message: color
             });
         });
-    } else {
-        $(this).removeAttr();
     }
 }
 
 //-10
-function animation() {
+function shivers() {
     var shake = "shivering";
     chrome.tabs.query({
         active: true,
@@ -64,29 +62,3 @@ function snowing() {
         });
     }
 }
-
-
-
-//Checkboxes function sourced from: https://www.coding.academy/blog/how-to-use-jquery-to-select-and-deselect-all-checkboxes
-
-$(function () {
-    $("#checkall").click(function () {
-        if (this.checked) {
-            $(".checkboxes").prop("checked", true);
-        } else {
-            $(".checkboxes").prop("checked", false);
-        }
-    })
-
-    $(".checkboxes").click(function () {
-        var numberOfCheckboxes = $(".checkboxes").length;
-        var numberOfCheckboxesChecked = $(".checkboxes:checked").length;
-        if (numberOfCheckboxes == numberOfCheckboxesChecked) {
-            $("#checkall").prop("checked", true);
-            console.log("everything is checked!");
-        } else {
-            $("#checkall").prop("checked", false);
-        }
-    })
-
-})
