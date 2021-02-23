@@ -19,8 +19,7 @@
         "default_popup": "popup.html"
     },
     "web_accessible_resources": [
-        "images/*.jpg",
-        "images/*.png",
-        "images/*.gif"
+        "/images/*.jpg",
+        "/images/*.png"
      ]
 }
