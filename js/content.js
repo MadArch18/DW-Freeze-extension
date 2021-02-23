@@ -12,33 +12,12 @@ var storm;
 //    })
 //
 //}
+
+
 var url = "http://pngimg.com/image/96122";
-//var iceimage = new Image();
-//iceimage.src = url;
-
-
-
-
-//function icemaker() {
-//    //    $(".ice-image").show();
-//    //    console.log("make ice");
-//    //    $("header").append(".ice-image");
-//    console.log("make ice");
-//    
-//
-//}
-
-//function image() {
 var source = chrome.runtime.getURL("/images/icicle-1.png");
 img = new Image();
 img.src = source;
-
-
-
-//
-//img.src = "/images/icicle-1.png";
-//$("#image").html(img);
-//}
 
 
 chrome.runtime.onMessage.addListener(
@@ -50,8 +29,9 @@ chrome.runtime.onMessage.addListener(
         }
         if (request.message == "shivering") {
             console.log("shiver me timbers");
-            //            animate();
-
+            $("a").hover(function () {
+                $(this).css("color", "aqua");
+            })
         }
         if (request.message == "make_ice") {
             console.log(img);
@@ -60,15 +40,17 @@ chrome.runtime.onMessage.addListener(
                 .height('64px');
             $("a").append(img);
             console.log("ice ice baby");
-
+            //image width and height sourced from: https://www.encodedna.com/javascript/practice-ground/default.htm?pg=assign_width_and_height_of_an_image_in_jquery
         }
         if (request.message == "start_snowing") {
             console.log("snow");
             storm.start(true);
 
         }
+
     })
 
+//snowStorm code sourced from: https://codepen.io/massiebn/pen/vmkwJ?editors=0011
 var snowStorm = (function (window, document) {
 
     // --- common properties ---
@@ -733,6 +715,3 @@ var snowStorm = (function (window, document) {
     return this;
 
 }(window, document));
-
-
-//https://codepen.io/massiebn/pen/vmkwJ?editors=0011
