@@ -29,13 +29,15 @@ var url = "http://pngimg.com/image/96122";
 //}
 
 //function image() {
-var img = chrome.runtime.getURL("images/icicle-1.png");
+var source = chrome.runtime.getURL("/images/icicle-1.png");
+img = new Image();
+img.src = source;
 
 
 
-
-img.src = "/images/icicle-1.png";
-$("#image").html(img);
+//
+//img.src = "/images/icicle-1.png";
+//$("#image").html(img);
 //}
 
 
@@ -52,26 +54,21 @@ chrome.runtime.onMessage.addListener(
 
         }
         if (request.message == "make_ice") {
-            //                var getImageLink = $(".ice img").attr("src");
-            //                $("header").append(getImageLink);
-            $(document).ready(function () {
-                var image = new Image();
-                image.src = url;
-                $("header", "head").append(image);
-            })
+            console.log(img);
+            $(img)
+                .width('64px')
+                .height('64px');
+            $("a").append(img);
             console.log("ice ice baby");
 
         }
         if (request.message == "start_snowing") {
             console.log("snow");
-            //            $("body").on("click", snowing);
             storm.start(true);
 
         }
     })
 
-//function snowing() {
-//    console.log("it should be working");
 var snowStorm = (function (window, document) {
 
     // --- common properties ---
